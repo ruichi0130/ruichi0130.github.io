@@ -1,0 +1,1 @@
+# ruichi0130.github.io
