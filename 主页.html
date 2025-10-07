@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <style>
+        /* CSS 样式：让页面更美观 */
+        body {
+            font-family: "微软雅黑", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #4a6fa5;
+            color: white;
+        }
+        h1 {
+            margin: 0;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+            border: 3px solid #4a6fa5;
+        }
+        .intro-text {
+            flex: 1;
+        }
+        .sections {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+        }
+        .section {
+            width: 30%;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .section h3 {
+            color: #4a6fa5;
+            text-align: center;
+        }
+        a {
+            color: #4a6fa5;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #4a6fa5;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>我的个人主页</h1>
+            <p>欢迎来到我的小世界</p>
+        </header>
+
+        <!-- 个人简介模块 -->
+        <div class="profile">
+            <img src="my-photo.jpg" alt="我的照片"> <!-- 替换为自己的照片路径 -->
+            <div class="intro-text">
+                <h2>关于我</h2>
+                <p>大家好，我叫池锐，是一名来自中国科学技术大学大数据专业的学生。我喜欢摄影、篮球、音乐。</p>
+                <p>这是我的个人主页，希望能和你分享生活、学习与兴趣～</p>
+            </div>
+        </div>
+
+        <!-- 多模块（带超链接和图片） -->
+        <div class="sections">
+            <div class="section">
+                <h3>我的学习</h3>
+                <p>我在USTC学习数据科学与大数据技术，平时会探索前端开发、后端技术等内容。</p>
+                <p>查看我的校园生活：<a href="study.html" target="_blank">学习主页</a></p>
+            </div>
+
+            <div class="section">
+                <h3>我的家乡</h3>
+                <p>我的家乡是浙江省温州市苍南县，一座沿海的小县城，那里有青山绿水和温暖的人情味。</p>
+                <p>欣赏家乡风景：<a href="hometown.html" target="_blank">家乡相册</a></p>
+            </div>
+
+            <div class="section">
+                <h3>我的兴趣</h3>
+                <p>我热爱摄影，喜欢用镜头捕捉生活里的闪光瞬间。</p>
+                <p>我的摄影作品：<a href="photography.html" target="_blank">摄影作品集</a></p>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 我的个人主页 | <a href="https://github.com/ruichi0130" target="_blank">我的GitHub</a></p>
+        </footer>
+    </div>
+</body>
+</html>

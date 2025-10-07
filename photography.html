@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摄影作品</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2A9D8F',
+                        light: '#F8F9FA',
+                        dark: '#333333'
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .photo-item {
+                transition: all 0.3s ease;
+            }
+            .photo-item:hover {
+                transform: scale(1.02);
+                z-index: 10;
+            }
+            .photo-overlay {
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            .photo-item:hover .photo-overlay {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light text-dark">
+    <!-- 导航 -->
+    <nav class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-primary font-bold text-xl flex items-center">
+                <i class="fa fa-camera-retro mr-2"></i>摄影作品
+            </a>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-600 hover:text-primary transition-colors">首页</a>
+                <a href="#nature" class="text-gray-600 hover:text-primary transition-colors">风光</a>
+                <a href="#portrait" class="text-gray-600 hover:text-primary transition-colors">人像</a>
+                <a href="#street" class="text-gray-600 hover:text-primary transition-colors">纪实</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部 -->
+    <header class="bg-primary text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">光影瞬间</h1>
+            <p class="max-w-lg mx-auto opacity-90">用镜头捕捉生活中的美好，记录世界的精彩瞬间</p>
+        </div>
+    </header>
+
+    <!-- 内容 -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- 关于我的摄影 -->
+        <section class="mb-12 text-center max-w-2xl mx-auto">
+            <p class="text-gray-700 mb-6">
+                摄影是我的爱好，也是我观察世界的方式。我喜欢用镜头记录生活中的细节和美好，
+                无论是壮丽的自然风光，还是街头的人文瞬间，都能给我带来灵感。
+            </p>
+        </section>
+
+        <!-- 自然风光 -->
+        <section id="nature" class="mb-16">
+            <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">自然风光</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="photo-item relative overflow-hidden rounded-lg shadow-sm h-64">
+                    <img src="pho-1.jpg" alt="大海" class="w-full h-full object-cover">
+                    <div class="photo-overlay absolute inset-0 bg-black/60 flex items-end">
+                        <div class="p-4 text-white">
+                            <h3 class="font-medium">大海</h3>
+                            <p class="text-sm text-white/80">厦门</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-item relative overflow-hidden rounded-lg shadow-sm h-64">
+                    <img src="pho-2.jpg" alt="公园小湖" class="w-full h-full object-cover">
+                    <div class="photo-overlay absolute inset-0 bg-black/60 flex items-end">
+                        <div class="p-4 text-white">
+                            <h3 class="font-medium">公园小湖</h3>
+                            <p class="text-sm text-white/80">北京</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-item relative overflow-hidden rounded-lg shadow-sm h-64">
+                    <img src="pho-3.jpg" alt="鸭子" class="w-full h-full object-cover">
+                    <div class="photo-overlay absolute inset-0 bg-black/60 flex items-end">
+                        <div class="p-4 text-white">
+                            <h3 class="font-medium">浙大鸭鸭</h3>
+                            <p class="text-sm text-white/80">杭州</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 人像摄影 -->
+        <section id="portrait" class="mb-16">
+            <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">人像摄影</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="photo-item relative overflow-hidden rounded-lg shadow-sm h-64">
+                    <img src="pho-4.jpg" alt="法喜寺" class="w-full h-full object-cover">
+                    <div class="photo-overlay absolute inset-0 bg-black/60 flex items-end">
+                        <div class="p-4 text-white">
+                            <h3 class="font-medium">祈祷</h3>
+                            <p class="text-sm text-white/80">法喜寺-杭州</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-item relative overflow-hidden rounded-lg shadow-sm h-64">
+                    <img src="pho-5.jpg" alt="牵手" class="w-full h-full object-cover">
+                    <div class="photo-overlay absolute inset-0 bg-black/60 flex items-end">
+                        <div class="p-4 text-white">
+                            <h3 class="font-medium">牵手</h3>
+                            <p class="text-sm text-white/80">温州</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-item relative overflow-hidden rounded-lg shadow-sm h-64">
+                    <img src="pho-6.jpg" alt="上海三件套" class="w-full h-full object-cover">
+                    <div class="photo-overlay absolute inset-0 bg-black/60 flex items-end">
+                        <div class="p-4 text-white">
+                            <h3 class="font-medium">上海三件套</h3>
+                            <p class="text-sm text-white/80">上海</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 街头纪实 -->
+        <section id="street">
+            <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">街头纪实</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="photo-item relative overflow-hidden rounded-lg shadow-sm h-64">
+                    <img src="pho-7.jpg" alt="茶杯" class="w-full h-full object-cover">
+                    <div class="photo-overlay absolute inset-0 bg-black/60 flex items-end">
+                        <div class="p-4 text-white">
+                            <h3 class="font-medium">鹤鸣茶舍</h3>
+                            <p class="text-sm text-white/80">成都</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-item relative overflow-hidden rounded-lg shadow-sm h-64">
+                    <img src="pho-8.jpg" alt="红墙" class="w-full h-full object-cover">
+                    <div class="photo-overlay absolute inset-0 bg-black/60 flex items-end">
+                        <div class="p-4 text-white">
+                            <h3 class="font-medium">红墙</h3>
+                            <p class="text-sm text-white/80">成都</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-item relative overflow-hidden rounded-lg shadow-sm h-64">
+                    <img src="pho-9.jpg" alt="街角" class="w-full h-full object-cover">
+                    <div class="photo-overlay absolute inset-0 bg-black/60 flex items-end">
+                        <div class="p-4 text-white">
+                            <h3 class="font-medium">最美街角</h3>
+                            <p class="text-sm text-white/80">上海</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-100 py-6 mt-12">
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>© 2023 个人介绍 | 摄影作品</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园生活</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A6FA5',
+                        light: '#F8F9FA',
+                        dark: '#333333'
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .img-hover {
+                transition: transform 0.3s ease;
+            }
+            .img-hover:hover {
+                transform: scale(1.03);
+            }
+        }
+    </style>
+</head>
+<body class="bg-light text-dark">
+    <!-- 导航 -->
+    <nav class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-primary font-bold text-xl">校园生活</a>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-600 hover:text-primary transition-colors">首页</a>
+                <a href="#daily" class="text-gray-600 hover:text-primary transition-colors">日常</a>
+                <a href="#events" class="text-gray-600 hover:text-primary transition-colors">活动</a>
+                <a href="#gallery" class="text-gray-600 hover:text-primary transition-colors">照片</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部 -->
+    <header class="bg-primary text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">我的校园生活</h1>
+            <p class="max-w-lg mx-auto opacity-90">记录在校园里的学习与成长，那些难忘的青春岁月</p>
+        </div>
+    </header>
+
+    <!-- 内容 -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- 日常学习 -->
+        <section id="daily" class="mb-16">
+            <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">日常学习</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <p class="mb-4 text-gray-700">
+                        校园生活充实而有规律，每天的学习是主要内容。图书馆、自习室、教室三点一线，虽然简单但很充实。
+                    </p>
+                    <p class="mb-4 text-gray-700">
+                        除了专业课学习，我还参加了几个兴趣社团，拓展自己的视野，认识了很多志同道合的朋友。
+                    </p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>每天保证6小时以上的学习时间</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>积极参与课堂讨论和小组项目</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>每周阅读至少两本专业相关书籍</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-sm">
+                    <img src="school-1.jpg" alt="图书馆学习" class="w-full img-hover">
+                </div>
+            </div>
+        </section>
+
+        <!-- 校园活动 -->
+        <section id="events" class="mb-16">
+            <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">校园活动</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-graduation-cap text-primary text-xl"></i>
+                    </div>
+                    <h3 class="font-medium text-lg mb-2">学术讲座</h3>
+                    <p class="text-gray-600 text-sm">定期参加各类学术讲座，了解行业前沿动态，拓宽知识面。</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-futbol-o text-primary text-xl"></i>
+                    </div>
+                    <h3 class="font-medium text-lg mb-2">体育比赛</h3>
+                    <p class="text-gray-600 text-sm">参与学院篮球赛和校运会，锻炼身体，增强团队协作能力。</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-microphone text-primary text-xl"></i>
+                    </div>
+                    <h3 class="font-medium text-lg mb-2">文艺表演</h3>
+                    <p class="text-gray-600 text-sm">作为志愿者参与校园文艺晚会组织工作，丰富课余生活。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 照片集锦 -->
+        <section id="gallery">
+            <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">精彩瞬间</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div class="overflow-hidden rounded shadow-sm">
+                    <img src="school-4.jpg" alt="课堂场景" class="w-full h-48 object-cover img-hover">
+                </div>
+                <div class="overflow-hidden rounded shadow-sm">
+                    <img src="school-3.jpg" alt="食堂" class="w-full h-48 object-cover img-hover">
+                </div>
+                <div class="overflow-hidden rounded shadow-sm">
+                    <img src="school-5.jpg" alt="运动会" class="w-full h-48 object-cover img-hover">
+                </div>
+                <div class="overflow-hidden rounded shadow-sm">
+                    <img src="school-2.jpg" alt="校园风景" class="w-full h-48 object-cover img-hover">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-100 py-6 mt-12">
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>© 2023 个人介绍 | 校园生活</p>
+        </div>
+    </footer>
+</body>
+</html>
